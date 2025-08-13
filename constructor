@@ -113,7 +113,3 @@ public class Main {
 **Special Case:**
 If we have a parameterized constructor in the derived class, it **still calls the default superclass constructor** by default.
 If the superclass **does not** have a default constructor but has a parameterized constructor, then the derived class constructor **must explicitly call** the parameterized superclass constructor.
-
----
-
-Do you also want me to merge **this section** and the **previous Class/Object section** into a **single master organized note** so it’s all in one place? That would make it a complete Java OOP basics reference.
