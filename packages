@@ -1,0 +1,79 @@
+## **Java Packages**
+
+**Definition**
+Packages are containers for classes and interfaces. They help keep the class namespace compartmentalized and organized.
+
+---
+
+### **Purpose**
+
+* Prevents **naming conflicts** (e.g., you can have your own `List` class without clashing with `java.util.List`).
+* Allows logical grouping of related classes.
+* Acts as both a **naming mechanism** and a **visibility control mechanism**.
+
+---
+
+### **Creating a Package**
+
+To create a package:
+
+```java
+package MyPackage;
+```
+
+* All `.class` files for classes in `MyPackage` must be stored in a folder named exactly **MyPackage** (case-sensitive).
+
+---
+
+### **Package Storage in File System**
+
+* Packages follow a **hierarchical directory structure**.
+* Example:
+
+```java
+package java.awt.image;
+```
+
+must be stored as:
+
+```
+java\awt\image   (Windows)
+java/awt/image   (Linux/Mac)
+```
+
+* Renaming a package means renaming the directory structure as well.
+
+---
+
+### **How Java Finds Your Packages**
+
+Java uses three main ways to locate packages:
+
+1. **Default Location**
+
+   * Current working directory is the starting point.
+   * If your package folder is a subdirectory of the current directory, it will be found automatically.
+
+2. **CLASSPATH Environment Variable**
+
+   * You can set the CLASSPATH variable to specify one or more directories where Java should look for packages.
+
+3. **`-classpath` Option**
+
+   * You can use:
+
+     ```bash
+     javac -classpath path_to_classes MyClass.java
+     java -classpath path_to_classes MyClass
+     ```
+
+---
+
+### **Importing Packages**
+
+* When a package is imported, only **public** members are accessible to non-subclasses in other packages.
+* Example:
+
+```java
+import MyPackage.MyClass;
+```
